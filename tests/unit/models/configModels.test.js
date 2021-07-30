@@ -19,7 +19,7 @@ describe('Config models', () => {
           expect(typeof model.create).to.equal('function')
         })
 
-        it('should expose a configuration property for Jira System API URL', async () => {
+        it('should expose a configuration property for Jira System Base URL', async () => {
           const configuration = await model.create()
           const actual = configuration.jiraSystemBaseUrl
           expect(actual).to.not.equal(null)
