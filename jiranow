@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# This file is used for local execution and testing of the Jira Now CLI
+node cli.js
