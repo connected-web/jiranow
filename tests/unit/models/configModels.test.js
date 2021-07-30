@@ -24,6 +24,15 @@ describe('Config models', () => {
           const actual = configuration.jiraSystemApiUrl
           expect(actual).to.not.equal(null)
           expect(typeof actual).to.equal('string')
+          expect(actual).to.deep.equal('UNDEFINED')
+        })
+
+        it('should expose a configuration property for Jira Default Project Space', async () => {
+          const configuration = await model.create()
+          const actual = configuration.jiraDefaultProjectSpace
+          expect(actual).to.not.equal(null)
+          expect(typeof actual).to.equal('string')
+          expect(actual).to.deep.equal('UNDEFINED')
         })
       })
     })
