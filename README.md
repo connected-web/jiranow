@@ -38,12 +38,41 @@ To get setup, a workflow wizard is provided on the command line - simply run the
 After initial configuration - Jira Now will look in these locations to store and load configuration:
 
 - `~/.jiranow/config.json` - a user's global jiranow configuration in their local system configuration
-- `./.jiranow.json` - a local jiranow configuration file in the current directory
 - `./package.json` - a jiranow configuration block inside package.json in the current directory
+- `./.jiranow.json` - a local jiranow configuration file in the current directory
 
 You can run `npx jiranow configure` again from any project folder, to either create new project level configuration, or update your user global defaults.
 
 Feel free to edit the files directly if you prefer; and be careful about what information or secrets are checked into source control.
+
+## Configuration
+
+Configuration is based around a shared working model - which is tiered based on context. The merge order for properties is as follows:
+
+1. System - stored in `~/.jiranow/config.json` 
+2. Package - stored in `./package.json`
+3. Folder - stored in `./.jiranow.json`
+4. Command Line Options - passed in at run time
+
+The property merge of these configurations forms the Working Knowledge of the tool used to execute commands; the following properties can be set in any location - and will be overriden in order starting with System config and finishing with Command Line Options.
+
+### Jira System API URL
+
+The URL of the Jira system you want to connect to; it's assumed that the Jira REST API is hosted on the path `/rest/api/` - raise an issue on this repo if it differs for your use case so it can be configured independently to the general use case.
+
+#### JSON Example
+
+```json
+{
+  "jiraSystemBaseUrl": "https://connected-web.atlassian.net"
+}
+```
+
+#### Command Line Example
+
+```sh
+npx jiranow --jiraSystemBaseUrl="https://connected-web.atlassian.net"
+```
 
 ## Environment Variables
 
