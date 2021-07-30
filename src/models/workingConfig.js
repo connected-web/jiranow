@@ -1,5 +1,7 @@
 async function create () {
-  const config = {}
+  const config = {
+    jiraSystemApiUrl: 'UNDEFINED'
+  }
 
   return config
 }
