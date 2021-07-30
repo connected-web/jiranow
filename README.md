@@ -45,6 +45,31 @@ You can run `npx jiranow configure` again from any project folder, to either cre
 
 Feel free to edit the files directly if you prefer; and be careful about what information or secrets are checked into source control.
 
-### Environment Variables
+## Environment Variables
 
 Environment variables are referenced via configuration; you can specify environment variables to store secret keys such as your Jira API token - you might need multiple environment variables to connect to different Jira systems - depending on the complexity of projects you're working on.
+
+## Local Development
+
+Checkout locally:
+
+- `git clone git@github.com:connected-web/jiranow.git`
+- `cd jiranow`
+- `npm install`
+- `npm test -s`
+
+To run the code locally, use:
+
+- `./jiranow`
+
+Raise PRs to 
+
+## Releases
+
+This tool is published through `npm`, and available through `npx`.
+
+Connected Web org members should be able to run `npm publish` from the local project to publish new versions. Later this may be revised to a CI responsibility (merge to main from an approved branch).ß
+
+## Contribution
+
+Please raise an issue against this repo, or contact the connected-web org if you're interested in helping develop this tool further.
