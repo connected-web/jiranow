@@ -56,9 +56,9 @@ Configuration is based around a shared working model - which is tiered based on 
 
 The property merge of these configurations forms the Working Knowledge of the tool used to execute commands; the following properties can be set in any location - and will be overriden in order starting with System config and finishing with Command Line Options.
 
-### Jira System API URL
+### Property: jiraSystemBaseUrl
 
-The URL of the Jira system you want to connect to; it's assumed that the Jira REST API is hosted on the path `/rest/api/` - raise an issue on this repo if it differs for your use case so it can be configured independently to the general use case.
+Jira System API URL - The URL of the Jira system you want to connect to; it's assumed that the Jira REST API is hosted on the path `/rest/api/` - raise an issue on this repo if it differs for your use case so it can be configured independently to the general use case.
 
 #### JSON Example
 
@@ -72,6 +72,24 @@ The URL of the Jira system you want to connect to; it's assumed that the Jira RE
 
 ```sh
 npx jiranow --jiraSystemBaseUrl="https://connected-web.atlassian.net"
+```
+
+### Property: jiraDefaultProjectSpace
+
+Jira Default Project Space - the project space prefix where to create the ticket.
+
+### JSON Example
+
+```json
+{
+  "jiraDefaultProjectSpace": "WORKOP"
+}
+```
+
+#### Command Line Example
+
+```sh
+npx jiranow --jiraDefaultProjectSpace="WORKOP"
 ```
 
 ## Environment Variables

@@ -4,7 +4,8 @@
   "description": "CA command line tool to help engineers create Jira tickets as fast as possible by providing as few details as possible.",
   "main": "src/jiranow.js",
   "scripts": {
-    "test": "standard --env mocha && npm run test:unit",
+    "test": "standard --env mocha && npm run test:unit && npm run test:documentation",
+    "test:documentation": "mocha tests/documentation/**/*test.js",
     "test:unit": "mocha tests/unit/**/*test.js",
     "lint": "standard --env mocha --fix"
   },
