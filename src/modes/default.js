@@ -2,7 +2,7 @@ const steps = require('../steps/_index')
 const { findJiraTicket } = steps
 
 const defaultMode = {
-  name: 'No OP?',
+  name: 'No OP? WIP',
   setup: ({ command, args, cwd }) => {
     const workingKnowledge = {
       ticket: command,
