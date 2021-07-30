@@ -1,0 +1,35 @@
+{
+  "name": "jiranow",
+  "version": "1.0.0",
+  "description": "CA command line tool to help engineers create Jira tickets as fast as possible by providing as few details as possible.",
+  "main": "src/jiranow.js",
+  "scripts": {
+    "test": "standard --env mocha && npm run test:unit",
+    "test:unit": "mocha tests/unit/**/*test.js",
+    "lint": "standard --env mocha --fix"
+  },
+  "bin": {
+    "jiranow": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connected-web/jiranow.git"
+  },
+  "files": [
+    "cli.js",
+    "src",
+    "README.md"
+  ],
+  "keywords": [],
+  "author": "Connected Web",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connected-web/jiranow/issues"
+  },
+  "homepage": "https://github.com/connected-web/jiranow#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "standard": "^14.3.3"
+  }
+}
