@@ -21,7 +21,7 @@ describe('Config models', () => {
 
         it('should expose a configuration property for Jira System API URL', async () => {
           const configuration = await model.create()
-          const actual = configuration.jiraSystemApiUrl
+          const actual = configuration.jiraSystemBaseUrl
           expect(actual).to.not.equal(null)
           expect(typeof actual).to.equal('string')
           expect(actual).to.deep.equal('UNDEFINED')

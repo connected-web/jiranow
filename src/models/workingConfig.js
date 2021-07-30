@@ -2,7 +2,7 @@ const UNDEFINED = 'UNDEFINED'
 
 async function create () {
   const config = {
-    jiraSystemApiUrl: UNDEFINED,
+    jiraSystemBaseUrl: UNDEFINED,
     jiraDefaultProjectSpace: UNDEFINED
   }
 
