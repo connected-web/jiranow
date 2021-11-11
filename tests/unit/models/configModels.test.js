@@ -47,7 +47,13 @@ describe('Config models', () => {
   })
 
   describe('Package Config', () => {
-
+    it('should retrieve an TEST_OVERRIDE property unique from the local project package.json', async () => {
+      const configuration = await packageConfig.create()
+      const actual = configuration.TEST_OVERRIDE
+      expect(actual).to.not.equal(null)
+      expect(typeof actual).to.equal('string')
+      expect(actual).to.deep.equal('hello mocha test')
+    })
   })
 
   describe('Working Config', () => {

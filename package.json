@@ -12,6 +12,9 @@
   "bin": {
     "jiranow": "cli.js"
   },
+  "jiranow": {
+    "TEST_OVERRIDE": "hello mocha test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/connected-web/jiranow.git"
