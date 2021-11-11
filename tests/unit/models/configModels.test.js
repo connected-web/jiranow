@@ -39,7 +39,13 @@ describe('Config models', () => {
   })
 
   describe('Folder Config', () => {
-
+    it('should retrieve an TEST_OVERRIDE property unique from the local project .jiranow.json', async () => {
+      const configuration = await folderConfig.create()
+      const actual = configuration.TEST_OVERRIDE
+      expect(actual).to.not.equal(null)
+      expect(typeof actual).to.equal('string')
+      expect(actual).to.deep.equal('hello mocha folder test')
+    })
   })
 
   describe('System Config', () => {
@@ -52,7 +58,7 @@ describe('Config models', () => {
       const actual = configuration.TEST_OVERRIDE
       expect(actual).to.not.equal(null)
       expect(typeof actual).to.equal('string')
-      expect(actual).to.deep.equal('hello mocha test')
+      expect(actual).to.deep.equal('hello mocha package test')
     })
   })
 

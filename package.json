@@ -13,7 +13,7 @@
     "jiranow": "cli.js"
   },
   "jiranow": {
-    "TEST_OVERRIDE": "hello mocha test"
+    "TEST_OVERRIDE": "hello mocha package test"
   },
   "repository": {
     "type": "git",
