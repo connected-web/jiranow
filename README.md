@@ -49,8 +49,8 @@ Feel free to edit the files directly if you prefer; and be careful about what in
 
 Configuration is based around a shared working model - which is tiered based on context. The merge order for properties is as follows:
 
-1. System - stored in `~/.jiranow/config.json` 
-2. Package - stored in `./package.json`
+1. System - stored in `~/.jiranow/jiranow.json` 
+2. Package - stored in `./package.json` under the key `jiranow`
 3. Folder - stored in `./.jiranow.json`
 4. Command Line Options - passed in at run time
 
